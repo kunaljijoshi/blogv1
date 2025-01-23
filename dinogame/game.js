@@ -15,7 +15,7 @@ const player = {
 };
 
 const obstacles = [];
-let gameSpeed = 2;
+let gameSpeed = 7;
 let score = 0;
 let maxScore = 0;  // Add max score variable
 let gameOver = false;
