@@ -1,0 +1,268 @@
+/* Base styles and CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F6FCFE;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background: #F6FCFE;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.brand {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Main content area */
+main {
+    flex: 1;
+    margin-top: 80px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Footer styles */
+footer {
+    background: #F6FCFE;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.gif-container {
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Profile image styles */
+.profile-img {
+    width: 160px;  /* Reduced from 200px */
+    height: 160px;  /* Added to maintain aspect ratio */
+    border-radius: 50%;
+    margin: 2rem auto;  /* Changed margin to auto for horizontal centering */
+    display: block;  /* Added to enable margin auto */
+    object-fit: cover;  /* Ensures image fills the circle nicely */
+}
+
+/* Blog styles */
+.blog-list {
+    margin: 3rem 0;
+}
+
+.blog-preview {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-preview h2 {
+    margin-bottom: 0.5rem;
+}
+
+.blog-preview h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.blog-preview h2 a:hover {
+    opacity: 0.7;
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.reading-time {
+    margin-left: 1rem;
+}
+
+.blog-excerpt {
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    color: var(--text-primary);
+}
+
+/* Individual blog post styles */
+.blog-post {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.blog-header {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.blog-content {
+    line-height: 1.8;
+}
+
+.blog-content h2 {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    color: rgb(75, 75, 75);
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.blog-content p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-content ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.code-block {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Comic styles */
+.comic-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comic-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.comic-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comic-credit {
+    color: #666;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+.comic-credit:hover {
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+/* Update page title spacing */
+h1.text-center {
+    margin: 2.5rem 0 1.5rem;
+} 
